@@ -8,7 +8,7 @@ def linearRegression(y, A):
     输入:
         y : numpy.ndarray
         A : numpy.ndarray
-        需要保证y和X的行数相同(按照行向量的方式储存)
+        需要保证y和A的列数相同(按照行向量的方式储存)
         y和A中的每一个行向量都是一张素材
     """
     dim = A.shape
