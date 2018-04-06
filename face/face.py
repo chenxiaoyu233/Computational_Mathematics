@@ -36,6 +36,8 @@ def getGreyPicture(data, picType):
     """
     输入:
         一幅图, data, 有RGB三色
+    输出:
+        一个灰度矩阵(1 x n)
     """
     if picType == 'pgm': #这种图本身就是灰度图
         return data * 1.0
@@ -44,11 +46,23 @@ def getGreyPicture(data, picType):
     return ret
 
 def getSimple(data, simplify):
+    """
+    用于将一张照片用simplify化简
+    """
     data = simplify(data, data.shape[1], 10, data.shape[0]) #可以调整精度
     data = data.reshape([1, data.size])
     return data
 
 def readPerson(Dir, picType, simplify):
+    """
+    用于读取某个人的全部的数据集
+    输入:
+        Dir : 数据集目录 (str)
+        picType : 图片格式 (str)
+        simplify : 化简函数 (func)
+    输出:
+        一个化简之后的矩阵, 其中每一个照片为矩阵的一行
+    """
     files = os.listdir(Dir)
     dirs = [Dir + '/' + File for File in files 
             if File[-len(picType) : ] == picType]
@@ -65,10 +79,11 @@ def recognizeFace(picType, faceWhere, dataBaseWhere, simplify, distance):
         picType : 样本图片格式
         faceWhere : 样本位置(文件)
         dataBaseWhere : dataBase位置(目录)
+        需要保证图片的大小相同, 且格式相同
         simplify : 降维函数
         distance : 距离函数
     输出:
-        样本属于的人的名字(dataBase中文件夹名)
+        样本属于的人的名字(dataBaseWhere中文件夹名)
     """
     face = getSimple(getGreyPicture(mpimg.imread(faceWhere), picType), simplify)
     names = os.listdir(dataBaseWhere) #读取数据库中的文件夹的名字
@@ -79,6 +94,8 @@ def recognizeFace(picType, faceWhere, dataBaseWhere, simplify, distance):
     return names[ID]
 
 if __name__ == '__main__' : #程序入口
-    ans = recognizeFace('pgm', './10.pgm', './att_faces',
+    #ans = recognizeFace('pgm', './10.pgm', './att_faces',
+    #        pca.PCA, linreg.linearRegression)
+    ans = recognizeFace(sys.argv[1], sys.argv[2], sys.argv[3], 
             pca.PCA, linreg.linearRegression)
     print(ans)
