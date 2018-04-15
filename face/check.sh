@@ -4,7 +4,7 @@ do
 	do
 		echo people : s$people, picture $which.pgm
 		mv ./att_faces/s$people/$which.pgm ./$which.pgm
-		python3 face.py pgm ./$which.pgm ./att_faces
+		python3 face_ver2.py ./att_faces ./$which.pgm
 		mv ./$which.pgm ./att_faces/s$people/$which.pgm
 	done
 done

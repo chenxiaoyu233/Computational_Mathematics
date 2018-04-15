@@ -29,7 +29,6 @@ def classify(sample, dataBase, simpFunc, distance):
     dis = []
     for i in range(len(dataBase)):
         dis.append(distance( simpFunc[i](sample.copy()), simpFunc[i](dataBase[i].copy()) ))
-    print(dis)
     minx, minWhere = dis[0], 0 
     l = len(dis)
     for i in range(l):
@@ -128,6 +127,9 @@ def recognizeFace(faceWhere, dataBaseWhere, distance):
     return names[ID]
 
 if __name__ == '__main__' : #程序入口
-    learningAllPerson(sys.argv[1], pca.PCA, fresh = True)
+    fs = False
+    if len(sys.argv) >= 4 and sys.argv[3] == 'fresh':
+        fs = True
+    learningAllPerson(sys.argv[1], pca.PCA, fresh = fs)
     ans = recognizeFace(sys.argv[2], sys.argv[1], linreg.linearRegression)
     print (ans)

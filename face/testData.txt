@@ -1,11 +1,11 @@
 people : s1, picture 1.pgm
-s24
+s1
 people : s1, picture 2.pgm
 s1
 people : s1, picture 3.pgm
-s32
+s1
 people : s1, picture 4.pgm
-s13
+s1
 people : s1, picture 5.pgm
 s1
 people : s1, picture 6.pgm
@@ -17,7 +17,7 @@ s1
 people : s1, picture 9.pgm
 s1
 people : s1, picture 10.pgm
-s27
+s1
 people : s2, picture 1.pgm
 s2
 people : s2, picture 2.pgm
@@ -27,7 +27,7 @@ s2
 people : s2, picture 4.pgm
 s2
 people : s2, picture 5.pgm
-s8
+s2
 people : s2, picture 6.pgm
 s2
 people : s2, picture 7.pgm
@@ -37,7 +37,7 @@ s2
 people : s2, picture 9.pgm
 s2
 people : s2, picture 10.pgm
-s27
+s2
 people : s3, picture 1.pgm
 s3
 people : s3, picture 2.pgm
@@ -49,7 +49,7 @@ s3
 people : s3, picture 5.pgm
 s3
 people : s3, picture 6.pgm
-s38
+s3
 people : s3, picture 7.pgm
 s3
 people : s3, picture 8.pgm
@@ -69,7 +69,7 @@ s4
 people : s4, picture 5.pgm
 s4
 people : s4, picture 6.pgm
-s27
+s4
 people : s4, picture 7.pgm
 s4
 people : s4, picture 8.pgm
@@ -79,7 +79,7 @@ s4
 people : s4, picture 10.pgm
 s4
 people : s5, picture 1.pgm
-s40
+s5
 people : s5, picture 2.pgm
 s5
 people : s5, picture 3.pgm
@@ -93,11 +93,11 @@ s5
 people : s5, picture 7.pgm
 s5
 people : s5, picture 8.pgm
-s9
+s5
 people : s5, picture 9.pgm
-s9
+s5
 people : s5, picture 10.pgm
-s18
+s5
 people : s6, picture 1.pgm
 s6
 people : s6, picture 2.pgm
@@ -153,7 +153,7 @@ s8
 people : s8, picture 7.pgm
 s8
 people : s8, picture 8.pgm
-s36
+s8
 people : s8, picture 9.pgm
 s8
 people : s8, picture 10.pgm
@@ -177,7 +177,7 @@ s9
 people : s9, picture 9.pgm
 s9
 people : s9, picture 10.pgm
-s25
+s9
 people : s10, picture 1.pgm
 s10
 people : s10, picture 2.pgm
@@ -197,7 +197,7 @@ s10
 people : s10, picture 9.pgm
 s10
 people : s10, picture 10.pgm
-s36
+s10
 people : s11, picture 1.pgm
 s11
 people : s11, picture 2.pgm
@@ -205,11 +205,11 @@ s11
 people : s11, picture 3.pgm
 s11
 people : s11, picture 4.pgm
-s28
+s11
 people : s11, picture 5.pgm
-s28
+s11
 people : s11, picture 6.pgm
-s15
+s11
 people : s11, picture 7.pgm
 s11
 people : s11, picture 8.pgm
@@ -219,7 +219,7 @@ s11
 people : s11, picture 10.pgm
 s11
 people : s12, picture 1.pgm
-s17
+s12
 people : s12, picture 2.pgm
 s12
 people : s12, picture 3.pgm
@@ -235,9 +235,9 @@ s12
 people : s12, picture 8.pgm
 s12
 people : s12, picture 9.pgm
-s9
+s12
 people : s12, picture 10.pgm
-s40
+s12
 people : s13, picture 1.pgm
 s13
 people : s13, picture 2.pgm
@@ -281,13 +281,13 @@ s14
 people : s15, picture 1.pgm
 s15
 people : s15, picture 2.pgm
-s23
+s15
 people : s15, picture 3.pgm
 s15
 people : s15, picture 4.pgm
 s15
 people : s15, picture 5.pgm
-s3
+s15
 people : s15, picture 6.pgm
 s15
 people : s15, picture 7.pgm
@@ -301,27 +301,27 @@ s15
 people : s16, picture 1.pgm
 s16
 people : s16, picture 2.pgm
-s24
+s16
 people : s16, picture 3.pgm
 s16
 people : s16, picture 4.pgm
-s14
+s16
 people : s16, picture 5.pgm
-s19
+s16
 people : s16, picture 6.pgm
-s19
+s16
 people : s16, picture 7.pgm
-s17
+s16
 people : s16, picture 8.pgm
 s16
 people : s16, picture 9.pgm
-s24
+s16
 people : s16, picture 10.pgm
 s16
 people : s17, picture 1.pgm
 s17
 people : s17, picture 2.pgm
-s25
+s17
 people : s17, picture 3.pgm
 s17
 people : s17, picture 4.pgm
@@ -337,7 +337,7 @@ s17
 people : s17, picture 9.pgm
 s17
 people : s17, picture 10.pgm
-s30
+s17
 people : s18, picture 1.pgm
 s18
 people : s18, picture 2.pgm
@@ -385,17 +385,17 @@ s20
 people : s20, picture 3.pgm
 s20
 people : s20, picture 4.pgm
-s29
+s20
 people : s20, picture 5.pgm
 s20
 people : s20, picture 6.pgm
-s38
+s20
 people : s20, picture 7.pgm
 s20
 people : s20, picture 8.pgm
 s20
 people : s20, picture 9.pgm
-s38
+s20
 people : s20, picture 10.pgm
 s20
 people : s21, picture 1.pgm
@@ -423,13 +423,13 @@ s22
 people : s22, picture 2.pgm
 s22
 people : s22, picture 3.pgm
-s11
+s22
 people : s22, picture 4.pgm
-s14
+s22
 people : s22, picture 5.pgm
 s22
 people : s22, picture 6.pgm
-s11
+s22
 people : s22, picture 7.pgm
 s22
 people : s22, picture 8.pgm
@@ -457,7 +457,7 @@ s23
 people : s23, picture 9.pgm
 s23
 people : s23, picture 10.pgm
-s38
+s23
 people : s24, picture 1.pgm
 s24
 people : s24, picture 2.pgm
@@ -465,15 +465,15 @@ s24
 people : s24, picture 3.pgm
 s24
 people : s24, picture 4.pgm
-s16
+s24
 people : s24, picture 5.pgm
 s24
 people : s24, picture 6.pgm
-s16
+s24
 people : s24, picture 7.pgm
 s24
 people : s24, picture 8.pgm
-s34
+s24
 people : s24, picture 9.pgm
 s24
 people : s24, picture 10.pgm
@@ -511,7 +511,7 @@ s26
 people : s26, picture 6.pgm
 s26
 people : s26, picture 7.pgm
-s28
+s26
 people : s26, picture 8.pgm
 s26
 people : s26, picture 9.pgm
@@ -531,13 +531,13 @@ s27
 people : s27, picture 6.pgm
 s27
 people : s27, picture 7.pgm
-s17
+s27
 people : s27, picture 8.pgm
 s27
 people : s27, picture 9.pgm
 s27
 people : s27, picture 10.pgm
-s17
+s27
 people : s28, picture 1.pgm
 s28
 people : s28, picture 2.pgm
@@ -545,7 +545,7 @@ s28
 people : s28, picture 3.pgm
 s28
 people : s28, picture 4.pgm
-s11
+s28
 people : s28, picture 5.pgm
 s28
 people : s28, picture 6.pgm
@@ -595,29 +595,29 @@ s30
 people : s30, picture 8.pgm
 s30
 people : s30, picture 9.pgm
-s38
+s30
 people : s30, picture 10.pgm
 s30
 people : s31, picture 1.pgm
 s31
 people : s31, picture 2.pgm
-s21
+s31
 people : s31, picture 3.pgm
-s15
+s31
 people : s31, picture 4.pgm
 s31
 people : s31, picture 5.pgm
 s31
 people : s31, picture 6.pgm
-s25
+s31
 people : s31, picture 7.pgm
 s31
 people : s31, picture 8.pgm
 s31
 people : s31, picture 9.pgm
-s9
+s31
 people : s31, picture 10.pgm
-s11
+s31
 people : s32, picture 1.pgm
 s32
 people : s32, picture 2.pgm
@@ -625,13 +625,13 @@ s32
 people : s32, picture 3.pgm
 s32
 people : s32, picture 4.pgm
-s19
+s32
 people : s32, picture 5.pgm
 s32
 people : s32, picture 6.pgm
 s32
 people : s32, picture 7.pgm
-s11
+s32
 people : s32, picture 8.pgm
 s32
 people : s32, picture 9.pgm
@@ -649,7 +649,7 @@ s33
 people : s33, picture 5.pgm
 s33
 people : s33, picture 6.pgm
-s20
+s33
 people : s33, picture 7.pgm
 s33
 people : s33, picture 8.pgm
@@ -679,9 +679,9 @@ s34
 people : s34, picture 10.pgm
 s34
 people : s35, picture 1.pgm
-s31
+s35
 people : s35, picture 2.pgm
-s25
+s35
 people : s35, picture 3.pgm
 s35
 people : s35, picture 4.pgm
@@ -693,11 +693,11 @@ s35
 people : s35, picture 7.pgm
 s35
 people : s35, picture 8.pgm
-s4
+s35
 people : s35, picture 9.pgm
-s14
+s35
 people : s35, picture 10.pgm
-s25
+s35
 people : s36, picture 1.pgm
 s36
 people : s36, picture 2.pgm
@@ -705,9 +705,9 @@ s36
 people : s36, picture 3.pgm
 s36
 people : s36, picture 4.pgm
-s7
+s36
 people : s36, picture 5.pgm
-s17
+s36
 people : s36, picture 6.pgm
 s36
 people : s36, picture 7.pgm
@@ -717,7 +717,7 @@ s36
 people : s36, picture 9.pgm
 s36
 people : s36, picture 10.pgm
-s11
+s36
 people : s37, picture 1.pgm
 s37
 people : s37, picture 2.pgm
@@ -741,33 +741,33 @@ s37
 people : s38, picture 1.pgm
 s38
 people : s38, picture 2.pgm
-s23
+s38
 people : s38, picture 3.pgm
 s38
 people : s38, picture 4.pgm
-s20
+s38
 people : s38, picture 5.pgm
 s38
 people : s38, picture 6.pgm
-s23
+s38
 people : s38, picture 7.pgm
 s38
 people : s38, picture 8.pgm
 s38
 people : s38, picture 9.pgm
-s23
+s38
 people : s38, picture 10.pgm
 s38
 people : s39, picture 1.pgm
 s39
 people : s39, picture 2.pgm
-s14
+s39
 people : s39, picture 3.pgm
 s39
 people : s39, picture 4.pgm
 s39
 people : s39, picture 5.pgm
-s37
+s39
 people : s39, picture 6.pgm
 s39
 people : s39, picture 7.pgm
@@ -777,24 +777,24 @@ s39
 people : s39, picture 9.pgm
 s39
 people : s39, picture 10.pgm
-s30
+s39
 people : s40, picture 1.pgm
 s40
 people : s40, picture 2.pgm
 s40
 people : s40, picture 3.pgm
-s18
+s40
 people : s40, picture 4.pgm
 s40
 people : s40, picture 5.pgm
-s15
+s40
 people : s40, picture 6.pgm
-s5
+s40
 people : s40, picture 7.pgm
 s40
 people : s40, picture 8.pgm
 s40
 people : s40, picture 9.pgm
-s25
+s40
 people : s40, picture 10.pgm
 s40

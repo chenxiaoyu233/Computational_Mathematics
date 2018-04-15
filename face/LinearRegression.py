@@ -15,7 +15,7 @@ def linearRegression(y, A):
     X = np.ones([1, dim[1]], dtype = 'float')
     X = np.append(X, A)
     X = X.reshape([dim[0]+1, dim[1]])
-    b = linalg.inv(X.dot( X.transpose() ) + np.identity(dim[0]+1) * 1e-3).dot(X.dot( y.transpose() )) #加了一个单位矩阵, 保证可逆
+    b = linalg.inv(X.dot( X.transpose() ) + np.identity(dim[0]+1) * 1e-7).dot(X.dot( y.transpose() )) #加了一个单位矩阵, 保证可逆
     yPre = X.transpose().dot(b)
     dy = y.transpose() - yPre
     return linalg.norm(dy.transpose().dot(dy))
