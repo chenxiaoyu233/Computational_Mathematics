@@ -38,7 +38,10 @@ def getGreyPicture(data, picType):
         一幅图, data, 有RGB三色
     输出:
         一个灰度矩阵(1 x n)
+        内部值为float
     """
+    data = data.astype('float') #将所有输入的图片都转化为float类型
+
     if picType == 'pgm': #这种图本身就是灰度图
         return data * 1.0
 

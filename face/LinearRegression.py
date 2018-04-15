@@ -12,13 +12,13 @@ def linearRegression(y, A):
         y和A中的每一个行向量都是一张素材
     """
     dim = A.shape
-    X = np.ones([1, dim[1]], dtype = 'float64')
+    X = np.ones([1, dim[1]], dtype = 'float')
     X = np.append(X, A)
     X = X.reshape([dim[0]+1, dim[1]])
-    b = linalg.inv(X.dot( X.transpose() )).dot(X.dot( y.transpose() ))
+    b = linalg.inv(X.dot( X.transpose() ) + np.identity(dim[0]+1) * 1e-3).dot(X.dot( y.transpose() )) #加了一个单位矩阵, 保证可逆
     yPre = X.transpose().dot(b)
     dy = y.transpose() - yPre
-    return dy.transpose().dot(dy)
+    return linalg.norm(dy.transpose().dot(dy))
 
 if __name__ == '__main__' : #测试
     y = np.array([[15.8, 16.0, 15.9, 16.2, 16.5, 16.3, 16.8, 17.4, 17.2]])

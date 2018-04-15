@@ -20,7 +20,7 @@ class eigPair(object):
     def __str__ (self): #用于调试输出
         return '[{}, {}]'.format(self.val, self.vec.__str__())
 
-def PCA(data, inputCntDim, outputCntDim, cntVec):
+def PCA(data, inputCntDim, outputCntDim, cntVec, mode = 'ans'):
     """
     这个函数用于提供计算PCA的功能.
     输入: 
@@ -28,6 +28,9 @@ def PCA(data, inputCntDim, outputCntDim, cntVec):
         inputCntDim: 输入数据data中待处理的数据的维数 (int)
         outputCntDim: 输出数据中希望保留的维数        (int)
         cntVec: data中包含的独立的向量的个数          (int)
+        mode: 希望得到的解的形式
+              'ans' : 直接返回答案
+              'func' : 返回转移矩阵
     输入矩阵的形式:
         /  x[1][1]         x[1][2]      ...    x[1][inputCntDim]    \\
         |  x[2][1]         x[2][2]      ...    x[2][inputCntDim]     |
@@ -63,8 +66,20 @@ def PCA(data, inputCntDim, outputCntDim, cntVec):
     featureVec = featureVec.reshape([outputCntDim, inputCntDim]) #调整形状
 
     #得到PCA之后的结果
-    ret = featureVec.dot(data.transpose())
-    return ret.transpose()
+    def trans(data):
+        return featureVec.dot(data.transpose()).transpose()
+
+    if mode == 'ans': 
+        return trans(data)
+    elif mode == 'func':
+        return featureVec, mean
+
+def genTrans(func):
+    def trans(data):
+        for i in range(data.shape[0]):
+            data[i, :] -= func[1]
+        return func[0].dot(data.transpose()).transpose()
+    return trans
 
 if __name__ == '__main__': #用于测试
     data = np.array([[2.5, 2.4],
@@ -78,5 +93,7 @@ if __name__ == '__main__': #用于测试
                      [1.5, 1.6],
                      [1.1, 0.9]])
                      
-    ans = PCA(data.copy(), data.shape[1], 1, data.shape[0])
+    ans = PCA(data.copy(), data.shape[1], 1, data.shape[0], mode = 'func')
+    func = genTrans(ans)
+    ans = func(data)
     print(ans)
