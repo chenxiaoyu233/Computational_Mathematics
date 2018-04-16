@@ -1,0 +1,21 @@
+\select@language {english}
+\contentsline {section}{Introduction}{1}{Doc-Start}
+\contentsline {paragraph}{}{1}{paragraph*.1}
+\contentsline {paragraph}{}{1}{paragraph*.2}
+\contentsline {section}{\numberline {1}Methods}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}利用最小二乘法计算距离}{1}{subsection.1.1}
+\contentsline {paragraph}{}{1}{paragraph*.3}
+\contentsline {paragraph}{}{2}{paragraph*.4}
+\contentsline {subsection}{\numberline {1.2}利用PCA对图片进行降维}{2}{subsection.1.2}
+\contentsline {paragraph}{}{2}{paragraph*.5}
+\contentsline {paragraph}{PCA}{2}{paragraph*.6}
+\contentsline {paragraph}{对PCA方法的实际应用}{4}{paragraph*.9}
+\contentsline {subsection}{\numberline {1.3}一些在实现中遇到的问题}{4}{subsection.1.3}
+\contentsline {paragraph}{计算特征值的效率问题}{4}{paragraph*.10}
+\contentsline {paragraph}{使用最小二乘法的时候矩阵不可逆的问题}{4}{paragraph*.11}
+\contentsline {section}{\numberline {2}Results and Discussion}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}数据集的选取与测试}{4}{subsection.2.1}
+\contentsline {paragraph}{第一次测试}{4}{paragraph*.12}
+\contentsline {section}{Acknowledgments}{5}{section*.13}
+\contentsline {section}{References}{5}{section*.14}
+\contentsfinish 
