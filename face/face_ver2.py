@@ -1,7 +1,3 @@
-# TodoList: 需要将所有的照片放到一起进行换基
-#
-#
-#
 #python 库
 import sys
 import os
