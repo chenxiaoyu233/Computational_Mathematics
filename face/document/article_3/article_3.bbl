@@ -11,6 +11,10 @@ Jon Shlens.
 \newblock 第四次 课模式识别及应用(二).
 \newblock 2018.
 
+\bibitem{database}
+AT\&T~Laboratories Cambridge.
+\newblock The orl database of faces.
+
 \bibitem{tutorial:PCA}
 Lindsay~I Smith.
 \newblock A tutorial on principal components analysis.

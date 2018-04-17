@@ -26,6 +26,67 @@
 \usepackage{ctex}
 \usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
 
+\usepackage{listings}   % include the package before using it
+\usepackage{color}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{geometry}
+
+\definecolor{Yellow}{RGB}{165, 119, 6}
+\definecolor{Orange}{RGB}{189, 54, 18}
+\definecolor{Red}{RGB}{209, 28, 36}
+\definecolor{Magenta}{RGB}{199, 27, 111}
+\definecolor{Violet}{RGB}{89, 90, 183}
+\definecolor{Blue}{RGB}{32, 118, 199}
+\definecolor{Cyan}{RGB}{37, 146, 134}
+\definecolor{Green}{RGB}{115, 138, 4}
+
+\lstset{ %
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+	basicstyle=\tiny,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{Green},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	frame=none,	                   % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle= {\bfseries\color{Blue}},       % keyword style
+	language=python,                 % the language of the code
+	%morekeywords={*,...},            % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\color{Magenta}, % the style that is used for the line-numbers
+	rulecolor=\color{Violet},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{Cyan},     % string literal style
+	tabsize=8,	                   % sets default tabsize to 2 spaces
+	title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+	morekeywords={alignas,continute,friend,register,true,alignof,decltype,goto,
+		reinterpret_cast,try,asm,defult,if,return,typedef,auto,delete,inline,short,
+		typeid,bool,do,int,signed,typename,break,double,long,sizeof,union,case,
+		dynamic_cast,mutable,static,unsigned,catch,else,namespace,static_assert,using,
+		char,enum,new,static_cast,virtual,char16_t,char32_t,explict,noexcept,struct,
+		void,export,nullptr,switch,volatile,class,extern,operator,template,wchar_t,
+		const,false,private,this,while,constexpr,float,protected,thread_local,
+		const_cast,for,public,throw,std},
+	emph={map,set,multimap,multiset,unordered_map,unordered_set,
+		unordered_multiset,unordered_multimap,vector,string,list,deque,
+		array,stack,forwared_list,iostream,memory,shared_ptr,unique_ptr,
+		random,bitset,ostream,istream,cout,cin,endl,move,default_random_engine,
+		uniform_int_distribution,iterator,algorithm,functional,bing,numeric,cstring,cstdio},
+	emphstyle=\color{Cyan},
+	emph={[2]define,include,define,ifdef,endif,elseif},emphstyle={[2]\color{Red}},
+	emph={[3]int,float,double,long,short,char},emphstyle={[3]\color{Yellow}},
+	emph={[4]for,if,else,while,do,goto,break,continue,new,delete,switch,case},emphstyle={[4]\bf\color{Orange}},
+	xleftmargin=1em,xrightmargin=1em, aboveskip=1em
+}
+
 %----------------------------------------------------------------------------------------
 %	COLUMNS
 %----------------------------------------------------------------------------------------
@@ -386,7 +447,7 @@
 并对其进行分析.
 \subsection{数据集的选取与测试}
 	\paragraph{第一次测试}
-		刚刚开始的时候, 我使用了AT\&T的人脸识别数据集.
+		刚刚开始的时候, 我使用了AT\&T的人脸识别数据集\cite{database}.
 		但是我不太清楚业内具体是如何使用这种数据的. 所以我采用了一种比较
 		简单的测试方法. 
 
@@ -394,24 +455,20 @@
 		然后将这个图片作为程序的输入, 看程序是否能够得到原来那个人的名字.
 		统计成功的次数. 然后就能用来判断程序的. 然后我通过不停的调整参数
 		(e.g. 调整PCA降维之后保留的维数), 通过一波面向数据编程, 使得
-		识别率达到了喜人的100\%.
+		识别率达到了喜人的97\%.
 
 	\paragraph{第二次测试}
 		这一次测试我采用了老师放在网盘上的各个同学提供的自拍照作为测试的
-		数据集.
+		数据集. 这一次的测试成绩并没有之前使用标准数据集测试得到的数据来得好.
+		但是这主要是因为很多同学并没有理解人脸识别的意思, 人脸识别,
+		并不包括人脸检测, 但是很多同学给的相片却是半身照, 这大大影响了识别的
+		准确率.
 
-\begin{description}
-\item[Word] Definition
-\item[Concept] Explanation
-\item[Idea] Text
-\end{description}
-
-\begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
-\item First item in a list
-\item Second item in a list
-\item Third item in a list
-\end{itemize}
-
+	\paragraph{关于运行速度}
+		经过测试, 预处理之后, 我的程序只需要300ms左右就可以完成一个人脸的识别.
+		并且, 虽然我没有具体实现, 在使用了PCA降维过后, 整个数据库所需的储存空间
+		是会大大降低的, 原来百万维的图片, 经过两步降维之后, 变成了一个
+		50维以内的向量. 这不仅节约了磁盘的空间, 而且降低了程序运行时的IO开销.
 
 %------------------------------------------------
 \phantomsection
@@ -432,5 +489,309 @@
 \bibliography{sample}
 
 %----------------------------------------------------------------------------------------
+
+\phantomsection
+\section*{Appendix}
+\addcontentsline{toc}{section}{Appendix} % Adds this section to the table of contents
+为了使得这篇文章显得更加的丰满, 我将我的实现过程贴到这篇附录当中.
+只是字可能稍微有点小, 不过反正都是电子版.
+
+\setmainfont{Monaco} % fonts
+\subsection*{face\_ver2.py}
+
+\begin{lstlisting}[language=python]
+#这个文件是程序的入口
+#python 库
+import sys
+import os
+import pickle
+
+#scipy 库
+from PIL import Image
+import numpy as np
+from scipy import linalg
+
+#本地库
+import PrincipalComponentsAnalisis as pca
+import LinearRegression as linreg
+
+def classify(sample, dataBase, distance):
+    """
+    int classify(sample, dataBase, simpFunc, distance)
+    用于判断sample到底归属于dataBase中的哪一个类别
+    sample 和 dataBase 中的数据都已经降维
+    输入:
+        sample : numpy.ndarray
+        dataBase : [numpy.ndarray] (注意到这个数据的外层套了一个list)
+        其中dataBase中的每一个ndarray表示了一个空间的基
+        distance : 距离函数(用于求sample到每个空间的距离)
+    输出:
+        返回一个整数, 表示sampleOri属于的那个dataBaseOri项的编号
+    """
+    dis = []
+    for i in range(len(dataBase)):
+        dis.append(distance(sample, dataBase[i]))
+    minx, minWhere = dis[0], 0 
+    l = len(dis)
+    for i in range(l):
+        if dis[i] < minx:
+            minx, minWhere = dis[i], i
+    return minWhere
+
+def getPicture(Dir):
+    """
+    输入:
+        一幅图的位置
+    输出:
+        一个灰度矩阵(1 x n)
+        内部值为float64
+        且归一化
+    """
+    data = Image.open(Dir)
+    data = data.resize((20, 20)) #调整图片的大小
+    data = np.asarray(data)
+    data = data.astype('float64') #将所有输入的图片都转化为float64类型
+    if len(data.shape) == 3: #这说明这个是一张彩图
+        data = data[:, :, 0] + data[:, :, 1] + data[:, :, 2] / 3.0
+    data.reshape([1, data.size])
+    data = data / linalg.norm(data) #归一化
+    return data.reshape([1, data.size])
+
+def readPerson(Dir):
+    """
+    用于读取某个人的全部的数据集
+    输入:
+        Dir : 数据集目录 (str)
+    输出:
+        一个人的照片矩阵
+        其中每一个照片为矩阵的一行
+    """
+    files = os.listdir(Dir)
+    dirs = [Dir + '/' + File for File in files if File[0] != '.']
+    faces = getPicture(dirs[0])
+    l = len(dirs)
+    for i in range(1, l):
+        tmpFace = getPicture(dirs[i])
+        faces = np.append(faces, tmpFace, axis = 0)
+    return faces
+
+def genPersonDir(dataBaseWhere):
+    """
+    用于生成dataBaseWhere的下级目录
+    """
+    names = os.listdir(dataBaseWhere) #读取数据库中的文件夹的名字
+    names = [item for item in names if item[0] != '.'] #注意去掉隐藏文件
+    names.sort();
+    dirs = [dataBaseWhere + '/' + name for name in names]
+    return names, dirs
+
+
+def learningAllPerson(dataBaseWhere, simplify, fresh = False):
+    """
+    输入: 
+        dataBaseWhere : dataBase位置(目录)
+        simplify : 降维函数
+        fresh : 是否需要更新之前的学习数据
+    输出:
+        无
+    功能:
+        生成一个转移矩阵, 存放在dataBaseWhere/.info中
+        为每个人的照片集生成一个已经降维的矩阵, 存放在dataBaseWhere/Person/.info中
+    """
+    if os.path.exists(dataBaseWhere + '/' + '.info') and (not fresh):
+        return
+
+    dirs = genPersonDir(dataBaseWhere)[1]
+
+    data = readPerson(dirs[0])
+    for i in range(1, len(dirs)):
+        data = np.append(data, readPerson(dirs[i]), axis = 0)
+
+    output = open(dataBaseWhere + '/' + '.info', 'wb')
+    simpFunc = simplify(data, data.shape[1], 40, data.shape[0], mode = 'func')
+    pickle.dump(simpFunc, output)
+    output.close()
+
+    func = pca.genTrans(simpFunc)
+    for Dir in dirs:
+        curDir = Dir + '/' + '.info'
+        output = open(curDir, 'wb')
+        pickle.dump(func(readPerson(Dir)), output)
+        output.close()
+
+
+
+def recognizeFace(faceWhere, dataBaseWhere, distance):
+    """
+    输入: 
+        faceWhere : 样本位置(文件)
+        dataBaseWhere : dataBase位置(目录)
+        保证dataBaseWhere中存放了各个不同的人的文件夹
+        |-dataBaseWhere
+            |-Person 1
+            |-Person 2
+            |-Person 3
+            |...
+            |-Person n
+        distance : 距离函数
+    输出:
+        样本属于的人的名字(dataBaseWhere中文件夹名)
+    """
+    face = getPicture(faceWhere)
+    names, dirs = genPersonDir(dataBaseWhere)
+
+    dataBase = []
+    for Dir in dirs:
+        info = open(Dir + '/' + '.info', 'rb')
+        dataBase.append(pickle.load(info))
+        info.close()
+
+    info = open(dataBaseWhere + '/' + '.info', 'rb')
+    simpFunc = pca.genTrans(pickle.load(info))
+    info.close()
+
+    ID = classify(simpFunc(face), dataBase, distance)
+
+    return names[ID]
+
+if __name__ == '__main__' : #程序入口
+    fs = False
+    if len(sys.argv) >= 4 and sys.argv[3] == 'fresh':
+        fs = True
+    learningAllPerson(sys.argv[1], pca.PCA, fresh = fs)
+    ans = recognizeFace(sys.argv[2], sys.argv[1], linreg.linearRegression)
+    print (ans)
+\end{lstlisting}
+
+\subsection*{PrincipalComponentsAnalisis.py}
+\begin{lstlisting}[language=python]
+#本文件主要用于实现PCA, 用于对输入图片的降维
+import numpy as np
+from scipy import linalg
+
+class eigPair(object):
+    """
+    用于储存特征值与特征向量的有序对, 构造比较函数
+    最终参与排序
+    """
+    def __init__ (self, val, vec):
+        """
+        val : float64
+        vec : numpy.array
+        """
+        self.val = abs(val) #需要按照绝对值的大小排序
+        self.vec = vec
+    def __lt__ (self, other):
+        return self.val > other.val #按降序排列
+    def __str__ (self): #用于调试输出
+        return '[{}, {}]'.format(self.val, self.vec.__str__())
+
+def PCA(data, inputCntDim, outputCntDim, cntVec, mode = 'ans'):
+    """
+    这个函数用于提供计算PCA的功能.
+    输入: 
+        data: 用于进行PCA处理的数据(二维矩阵)         (np.array)
+        inputCntDim: 输入数据data中待处理的数据的维数 (int)
+        outputCntDim: 输出数据中希望保留的维数        (int)
+        cntVec: data中包含的独立的向量的个数          (int)
+        mode: 希望得到的解的形式
+              'ans' : 直接返回答案
+              'func' : 返回转移矩阵
+    输入矩阵的形式:
+        /  x[1][1]         x[1][2]      ...    x[1][inputCntDim]    \\
+        |  x[2][1]         x[2][2]      ...    x[2][inputCntDim]     |
+        |    ...             ...        ...       ...                |
+        \\x[cntVec][1]    x[cntVec][2]  ...   x[cntVec][inputCntDim] /
+        <=>
+        / Img[1]     \\
+        | Img[2]     |
+        |  ...       |
+        \\Img[cntVec]/
+        具体实现时从0开始编号
+    输出:
+        一个矩阵, 包含和data相同的行数, 列数变为outputCntDim, 丢失尽量少测信息
+    """
+    data.dtype = 'float64' #确认类型
+    #计算并剪去平均数
+    mean = np.mean(data, axis = 0)
+    for i in range(cntVec):
+        data[i, :] -= mean
+
+    #计算相关系数
+    cov = np.cov(data, rowvar = False)
+    
+    #计算特征值与特征向量并排序
+    eigenvalue, eigenvector = linalg.eig(cov)
+    eigList = [eigPair(eigenvalue[i], eigenvector[:, i]) for i in range(inputCntDim)]
+    eigList.sort()
+
+    #选择前面outputCntDim个特征向量
+    featureVec = eigList[0].vec
+    for i in range(1, outputCntDim):
+        featureVec = np.append(featureVec, eigList[i].vec)
+    featureVec = featureVec.reshape([outputCntDim, inputCntDim]) #调整形状
+
+    #得到PCA之后的结果
+    def trans(data):
+        return featureVec.dot(data.transpose()).transpose()
+
+    if mode == 'ans': 
+        return trans(data)
+    elif mode == 'func':
+        return featureVec, mean
+
+def genTrans(func):
+    def trans(data):
+        for i in range(data.shape[0]):
+            data[i, :] -= func[1]
+        return func[0].dot(data.transpose()).transpose()
+    return trans
+
+if __name__ == '__main__': #用于测试
+    data = np.array([[2.5, 2.4],
+                     [0.5, 0.7],
+                     [2.2, 2.9],
+                     [1.9, 2.2],
+                     [3.1, 3.0],
+                     [2.3, 2.7],
+                     [2.0, 1.6],
+                     [1.0, 1.1],
+                     [1.5, 1.6],
+                     [1.1, 0.9]])
+                     
+    ans = PCA(data.copy(), data.shape[1], 1, data.shape[0], mode = 'func')
+    func = genTrans(ans)
+    ans = func(data)
+    print(ans)
+\end{lstlisting}
+
+\subsection*{LinearRegression.py}
+\begin{lstlisting}[language=python]
+#这个文件用于实现用多元线性回归
+
+import numpy as np
+from scipy import linalg
+
+def linearRegression(y, X):
+    """
+    输入:
+        y : numpy.ndarray
+        X : numpy.ndarray
+        需要保证y和A的列数相同(按照行向量的方式储存)
+        y和A中的每一个行向量都是一张素材
+    """
+    rho = 0.005
+    dim = X.shape
+    b = linalg.inv(X.dot( X.transpose() ) + np.identity(dim[0]) * rho).dot(X.dot( y.transpose() )) #加了一个单位矩阵, 保证可逆
+    yPre = X.transpose().dot(b)
+    dy = y.transpose() - yPre
+    return linalg.norm(dy.transpose().dot(dy)+ rho * b.transpose().dot(b))
+
+if __name__ == '__main__' : #测试
+    y = np.array([[15.8, 16.0, 15.9, 16.2, 16.5, 16.3, 16.8, 17.4, 17.2]])
+    A = np.array([[0, 1, 0, 1, 2, 0, 2, 3, 1],
+                  [0, 0, 1, 1, 0, 2, 2, 1, 3]])
+    linearRegression(y, A)
+\end{lstlisting}
 
 \end{document}

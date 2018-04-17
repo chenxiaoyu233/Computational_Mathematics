@@ -5,38 +5,40 @@ The style file: unsrt.bst
 Database file #1: sample.bib
 Warning--empty journal in princetonPCA:25:2003
 Warning--empty journal in ShenFuming:ppt
+Warning--empty journal in database
+Warning--empty year in database
 Warning--empty journal in tutorial:PCA
 Warning--empty journal in prob
-You've used 4 entries,
+You've used 5 entries,
             1791 wiz_defined-function locations,
-            465 strings with 3941 characters,
-and the built_in function-call counts, 706 in all, are:
-= -- 61
-> -- 16
+            468 strings with 4002 characters,
+and the built_in function-call counts, 830 in all, are:
+= -- 69
+> -- 20
 < -- 1
-+ -- 8
-- -- 4
-* -- 24
-:= -- 116
-add.period$ -- 12
-call.type$ -- 4
-change.case$ -- 4
++ -- 10
+- -- 5
+* -- 30
+:= -- 137
+add.period$ -- 14
+call.type$ -- 5
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 42
-empty$ -- 72
-format.name$ -- 4
-if$ -- 158
+cite$ -- 11
+duplicate$ -- 50
+empty$ -- 86
+format.name$ -- 5
+if$ -- 183
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 23
-num.names$ -- 4
-pop$ -- 20
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 27
+num.names$ -- 5
+pop$ -- 26
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 24
+skip$ -- 27
 stack$ -- 0
 substring$ -- 28
 swap$ -- 9
@@ -44,8 +46,8 @@ text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 6
-width$ -- 5
-write$ -- 39
-(There were 4 warnings)
+warning$ -- 6
+while$ -- 7
+width$ -- 6
+write$ -- 46
+(There were 6 warnings)

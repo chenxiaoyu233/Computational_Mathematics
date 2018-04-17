@@ -186,6 +186,14 @@ INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/ctex/config/ctex.cfg
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/ctex/config/ctex.cfg
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/lipsum/lipsum.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/lipsum/lipsum.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -212,6 +220,8 @@ INPUT /usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/stringenc.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/stringenc.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 INPUT article_3.aux
 INPUT article_3.aux
 OUTPUT article_3.aux
@@ -299,4 +309,12 @@ INPUT example.jpeg
 INPUT example1.jpeg
 INPUT article_3.bbl
 INPUT article_3.bbl
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT article_3.aux
