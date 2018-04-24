@@ -1,14 +1,14 @@
 #!/bin/bash
 
-for name in ./pic/*
+dataDir=./att_faces
+testDir=./testCase
+
+for name in $testDir/*
 do
 	for pic in $name/*
 	do
-		mv $pic ./
 		expect=`basename $name`
-		filename=`basename $pic`
-		ans=`python3 face_ver2.py ./pic ./$filename fresh`
+		ans=`python3 face_ver2.py $dataDir $pic`
 		echo $expect $ans
-		mv ./$filename $pic
 	done
 done

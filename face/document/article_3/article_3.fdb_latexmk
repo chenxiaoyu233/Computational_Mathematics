@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex article_3"] 1523962252 "article_3.aux" "article_3.bbl" "article_3" 1523962255
+["bibtex article_3"] 1524585942 "article_3.aux" "article_3.bbl" "article_3" 1524585947
   "/usr/local/texlive/2016/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "article_3.aux" 1523962255 4191 f672e18f9762302062dd5ce40682bb05 ""
+  "article_3.aux" 1524585945 4414 ed7876abcc7930e442ded5a3ce36d75a ""
   "article_3.bcf" 0 -1 0 ""
   "sample.bib" 1523960003 1020 0ce87b3e6972f21599a79fdd0726e7b6 ""
   (generated)
-  "article_3.blg"
   "article_3.bbl"
-["pdflatex"] 1523962252 "article_3.tex" "article_3.pdf" "article_3" 1523962255
+  "article_3.blg"
+["pdflatex"] 1524585942 "article_3.tex" "article_3.pdf" "article_3" 1524585947
   "/Library/Fonts/Songti.ttc" 1501211855 66933232 48b917363d34d9f8e018d72f817cd5db ""
-  "/dev/null" 1523962255 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "/dev/null" 1524585943 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm" 1136768653 2288 f478fc8fed18759effb59f3dad7f3084 ""
@@ -71,6 +71,7 @@
   "/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1enc.def" 1284849341 1115 6f8850603672e58af2cd599bee6ade7d ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1lmr.fd" 1266195411 2284 11da099e92da4724f712149045c96354 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1lmss.fd" 1266195411 1546 f73305b0ca2520efb4953d14dfcb9cb7 ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1lmtt.fd" 1266195411 2375 048018091c9aef586c688eaf2feff1a1 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty" 1160175134 20521 e5d13d98d57bd53d4fed3aa61bd29c86 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty" 1454367976 105606 a38c5ce7d05796198d17f5a6bc55964a ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec.cfg" 1454367976 530 838458c50df1b4d16b8dc5267ab31958 ""
@@ -143,16 +144,16 @@
   "/usr/local/texlive/2016/texmf-var/web2c/xetex/xelatex.fmt" 1490280596 3520379 f1a4ca5a88bc02d81195cd3b89f159b9 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
   "SelfArx.cls" 1443703006 7278 e73ad3fe0a654ddca73525a34dd49344 ""
-  "article_3.aux" 1523962255 4191 f672e18f9762302062dd5ce40682bb05 ""
-  "article_3.bbl" 1523962252 674 2fb1b3516d4816d270470afc53acca59 "bibtex article_3"
-  "article_3.out" 1523962255 1204 cb58e16901217fc3a7e845f6e391fdcd ""
-  "article_3.tex" 1523962243 35959 1934e65649d9a40a535ebef0beb08b2f ""
-  "article_3.toc" 1523962255 1484 da37dbbc126f3baec1ee7e91a109d8f7 ""
+  "article_3.aux" 1524585945 4414 ed7876abcc7930e442ded5a3ce36d75a ""
+  "article_3.bbl" 1524585942 674 2fb1b3516d4816d270470afc53acca59 "bibtex article_3"
+  "article_3.out" 1524585945 1204 24882b9abb3f764e5ea7cf2260c1bd1d ""
+  "article_3.tex" 1524585937 38176 9991c8dbfa30baa8094673efadd0097c ""
+  "article_3.toc" 1524585945 1639 b1089d3fd5ee9df0aed1c952b386c179 ""
   "example.jpeg" 1523869184 22988 4f17b29727429fcb6cb35536456855a7 ""
   "example1.jpeg" 1523870374 27695 da816b4fd80a6acfee569d1fd2c9d812 ""
   (generated)
-  "article_3.aux"
-  "article_3.out"
+  "article_3.log"
   "article_3.pdf"
   "article_3.toc"
-  "article_3.log"
+  "article_3.out"
+  "article_3.aux"

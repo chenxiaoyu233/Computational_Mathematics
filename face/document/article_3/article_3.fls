@@ -307,6 +307,8 @@ INPUT article_3.toc
 OUTPUT article_3.toc
 INPUT example.jpeg
 INPUT example1.jpeg
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 INPUT article_3.bbl
 INPUT article_3.bbl
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm

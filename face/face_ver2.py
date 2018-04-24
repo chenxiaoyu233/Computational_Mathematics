@@ -45,7 +45,7 @@ def getPicture(Dir):
         且归一化
     """
     data = Image.open(Dir)
-    data = data.resize((20, 20)) #调整图片的大小
+    data = data.resize((100, 100)) #调整图片的大小
     data = np.asarray(data)
     data = data.astype('float64') #将所有输入的图片都转化为float64类型
     if len(data.shape) == 3: #这说明这个是一张彩图

@@ -55,7 +55,8 @@ def PCA(data, inputCntDim, outputCntDim, cntVec, mode = 'ans'):
     cov = np.cov(data, rowvar = False)
     
     #计算特征值与特征向量并排序
-    eigenvalue, eigenvector = linalg.eig(cov)
+    #eigenvalue, eigenvector = linalg.eig(cov)
+    eigenvalue, eigenvector = linalg.eigh(cov)
     eigList = [eigPair(eigenvalue[i], eigenvector[:, i]) for i in range(inputCntDim)]
     eigList.sort()
 
