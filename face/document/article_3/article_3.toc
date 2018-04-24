@@ -3,8 +3,8 @@
 \contentsline {paragraph}{}{1}{paragraph*.1}
 \contentsline {paragraph}{}{1}{paragraph*.2}
 \contentsline {section}{\numberline {1}Methods}{1}{section.1}
-\contentsline {subsection}{\numberline {1.1}利用最小二乘法计算距离}{1}{subsection.1.1}
-\contentsline {paragraph}{}{1}{paragraph*.3}
+\contentsline {subsection}{\numberline {1.1}利用最小二乘法计算距离}{2}{subsection.1.1}
+\contentsline {paragraph}{}{2}{paragraph*.3}
 \contentsline {paragraph}{}{2}{paragraph*.4}
 \contentsline {subsection}{\numberline {1.2}利用PCA对图片进行降维}{2}{subsection.1.2}
 \contentsline {paragraph}{}{2}{paragraph*.5}
