@@ -50,11 +50,13 @@ class imageSetReader(dataReader):
         ret = np.array(ret)
         return ret
 
-    def __init__(self, path):
+    def __init__(self, path, itemNumber = None):
         dataReader.__init__(self, path)
         self.rowNumber = self.readInt()
         self.colNumber = self.readInt()
         self.imageSet = []
+        if itemNumber != None:
+            self.itemNumber = itemNumber
         for i in range(self.itemNumber):
             self.imageSet.append(self.readImage())
 
