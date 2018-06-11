@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{princetonPCA:25:2003}
+Jon Shlens.
+\newblock A tutorial on principal component analysis derivation, discussion and
+  singular value decomposition.
+\newblock 2003.
+
+\bibitem{ShenFuming:ppt}
+沈复民.
+\newblock 第四次 课模式识别及应用(二).
+\newblock 2018.
+
+\bibitem{database}
+AT\&T~Laboratories Cambridge.
+\newblock The orl database of faces.
+
+\bibitem{tutorial:PCA}
+Lindsay~I Smith.
+\newblock A tutorial on principal components analysis.
+\newblock 2002.
+
+\bibitem{prob}
+吕恕 徐全志.
+\newblock
+  概率论与数理统计(第三版).电子科技大学数学科学院.
+\newblock pages 216--219, 2016.
+
+\end{thebibliography}

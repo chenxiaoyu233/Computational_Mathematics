@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: article_3.aux
+The style file: unsrt.bst
+Database file #1: sample.bib
+Warning--empty journal in princetonPCA:25:2003
+Warning--empty journal in ShenFuming:ppt
+Warning--empty journal in database
+Warning--empty year in database
+Warning--empty journal in tutorial:PCA
+Warning--empty journal in prob
+You've used 5 entries,
+            1791 wiz_defined-function locations,
+            468 strings with 4002 characters,
+and the built_in function-call counts, 830 in all, are:
+= -- 69
+> -- 20
+< -- 1
++ -- 10
+- -- 5
+* -- 30
+:= -- 137
+add.period$ -- 14
+call.type$ -- 5
+change.case$ -- 5
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 50
+empty$ -- 86
+format.name$ -- 5
+if$ -- 183
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 27
+num.names$ -- 5
+pop$ -- 26
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 27
+stack$ -- 0
+substring$ -- 28
+swap$ -- 9
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 6
+while$ -- 7
+width$ -- 6
+write$ -- 46
+(There were 6 warnings)
