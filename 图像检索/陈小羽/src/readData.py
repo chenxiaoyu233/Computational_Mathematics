@@ -1,5 +1,4 @@
 import numpy as np
-from matplotlib import pyplot as plt
 
 class dataReader(object):
     # rawIn       : other of rawIn

@@ -1,14 +1,16 @@
 import numpy as np
 import random as rand
 
+
 class kdTreeNode(object):
     # pt  : the point in the origin list
     # dim : the dim that this Node is used for seperate the point
     # son : the sons on the KDTree
-    def __init__(self, pt, dim = 0, son = [None, None]):
+    def __init__(self, pt, dim=0, son=[None, None]):
         self.pt = pt
         self.dim = dim
         self.son = son
+
 
 class KDTree(object):
     # dimNum : dimention
@@ -22,7 +24,7 @@ class KDTree(object):
         for pt in ptList:
             delta = pt[0] - mean
             delta2 += delta * delta
-        return delta2 #这个地方除不除n都没有影响了
+        return delta2  # 这个地方除不除n都没有影响了
 
     def selectDim(self, ptList):
         delta = self.calcDel(ptList)
@@ -32,10 +34,10 @@ class KDTree(object):
                 maxx, maxwhe = delta[i], i
         return maxwhe
 
-    def genKeyFunc(self, type, dim = 0):
+    def genKeyFunc(self, type, dim=0):
         if(type == 'id'):
             def key(x):
-                return x[1] 
+                return x[1]
             return key
         elif(type == 'dim'):
             def key(x):
@@ -44,7 +46,6 @@ class KDTree(object):
 
     def throw(self, curData, pivot, key):
         under, over, mid = [], [], []
-        pcount = 0
         for item in curData:
             if key(item) < key(pivot):
                 under.append(item)
@@ -52,7 +53,7 @@ class KDTree(object):
                 over.append(item)
             else:
                 mid.append(item)
-        return under, over, mid 
+        return under, over, mid
 
     # a nth_element() implement
     def select(self, data, n, key):
@@ -72,14 +73,14 @@ class KDTree(object):
                 curData = over
                 n -= len(under) + len(mid)
         pass
-    
+
     def build(self, ptList):
         if len(ptList) == 0:
             return None
         n = len(ptList) - 1
         mid = n//2
         curDim = self.selectDim(ptList)
-        print(curDim, end = '')
+        # print(curDim, end=' ')
         ptList, pivot = self.select(ptList, mid, self.genKeyFunc('dim', curDim))
         return kdTreeNode(pivot, curDim, [self.build(ptList[:mid]), self.build(ptList[mid+1:])])
 
@@ -91,7 +92,7 @@ class KDTree(object):
     # p1, p2 <- np.array
     def distance(self, p1, p2):
         dt = p1 - p2
-        return dt.dot(dt) #没有开方的必要
+        return dt.dot(dt)  # 没有开方的必要
 
     def updateAns(self, ans, newAns, maxN, pt):
         ret = []
@@ -118,7 +119,7 @@ class KDTree(object):
 
     def query(self, pt, maxN, rt):
         ans = []
-        if(rt == None):
+        if rt is None:
             return ans
         fst = 0 if pt[rt.dim] <= rt.pt[0][rt.dim] else 1
         sec = 1 - fst
@@ -130,6 +131,7 @@ class KDTree(object):
             ans = self.updateAns(ans, self.query(pt, maxN, rt.son[sec]), maxN, pt)
         return ans
 
+
 class KDTreeTest(object):
     def __init__(self, dimNum, ptList):
         self.dimNum = dimNum
@@ -137,7 +139,7 @@ class KDTreeTest(object):
 
     def distance(self, p1, p2):
         dt = p1 - p2
-        return dt.dot(dt) #没有开方的必要
+        return dt.dot(dt)  # 没有开方的必要
 
     def update(self, ans, pt, p, maxN):
         ans = ans.copy()
@@ -158,6 +160,7 @@ class KDTreeTest(object):
 
 # KDTree test
 
+
 # rand.seed(10)
 # f = open('main.in', 'r')
 # sz = int(f.readline())
@@ -168,27 +171,27 @@ class KDTreeTest(object):
 #     str = str[:-1]
 #     str = [int(item) for item in str]
 #     data.append(np.array(str))
-# 
+#
 # str = f.readline().split(' ')
 # str = str[:-1]
 # str = [int(item) for item in str]
 # target = np.array(str)
-# 
+#
 # kd = KDTree(sz, data)
 # print('finish building kdtree ...')
 # test = KDTreeTest(sz, data)
 # print('finish building test ...')
-# 
+#
 # maxN = 10
-# 
+#
 # ans_kd = kd.query(target, maxN, kd.root)
 # ans_test = test.query(target, maxN)
-# 
+#
 # for i in range(maxN):
 #     print(ans_kd[i][1], ans_test[i][1])
 #     print(kd.distance(ans_kd[i][0], target), kd.distance(ans_test[i][0], target))
-# 
+#
 #     if kd.distance(ans_kd[i][0], target) != test.distance(ans_test[i][0], target):
 #         exit(0)
-# 
+#
 # exit(1)
