@@ -55,7 +55,7 @@ class KDTree(object):
                 mid.append(item)
         return under, over, mid
 
-    # a nth_element() implement
+    # an nth_element() implement
     def select(self, data, n, key):
         curData = data
         N = n
